@@ -8,18 +8,14 @@ window.onload = () => {
   let num = ["A", "J", "Q", "K", "2", "3", "4", "5", "6", "7", "8", "9", "10"];
 
   //Function Randomizer
-  function randomizer() {
-    let ranpint = Math.floor(Math.random() * pint.length);
-    return ranpint;
-  }
-
-  function randomizer() {
-    let rannum = Math.floor(Math.random() * num.length);
-    return rannum;
+  function randomizer(arr) {
+    let pos = Math.floor(Math.random() * arr.length);
+    return pos;
   }
 
   //Function link
-  document.getElementById("number-left").innerHTML = randomizer(num);
-  document.getElementById("pinta").innerHTML = randomizer(pint);
-  document.getElementById("number-right").innerHTML = randomizer(pint);
+  let pos = randomizer(pint);
+  document.getElementById("number-left").innerHTML = pint[pos];
+  document.getElementById("pinta").innerHTML = randomizer(num);
+  document.getElementById("number-right").innerHTML = pint[pos];
 };
