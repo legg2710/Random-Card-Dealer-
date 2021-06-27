@@ -13,9 +13,22 @@ window.onload = () => {
     return pos;
   }
 
+  //Color Function
+  function cardcolors() {
+    const simbol = randomizer(pint);
+    if (simbol === "♥" || simbol === "♦");
+    {
+      let x, i;
+      x = document.querySelectorAll("card");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.color = "red";
+      }
+    }
+  }
+
   //Function link
   let pos = randomizer(pint);
   document.getElementById("number-left").innerHTML = pint[pos];
-  document.getElementById("pinta").innerHTML = randomizer(num);
+  document.getElementById("pinta").innerHTML = num[pos];
   document.getElementById("number-right").innerHTML = pint[pos];
 };
