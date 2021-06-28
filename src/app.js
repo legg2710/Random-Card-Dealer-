@@ -19,16 +19,17 @@ window.onload = () => {
     if (simbol === "♥" || simbol === "♦");
     {
       let x, i;
-      x = document.querySelectorAll("card");
+      x = document.querySelectorAll(".card");
       for (i = 0; i < x.length; i++) {
         x[i].style.color = "red";
       }
     }
+    //Function link
+    let pos = randomizer(pint);
+    document.getElementById("pinta-left").innerHTML = pint[pos];
+    document.getElementById("number").innerHTML = num[pos];
+    document.getElementById("pinta-right").innerHTML = pint[pos];
   }
 
-  //Function link
-  let pos = randomizer(pint);
-  document.getElementById("number-left").innerHTML = pint[pos];
-  document.getElementById("pinta").innerHTML = num[pos];
-  document.getElementById("number-right").innerHTML = pint[pos];
+  cardcolors();
 };

@@ -11,15 +11,16 @@ body {
   background-color: whitesmoke;
   display: flex;
   align-items: center;
+  margin-top: 1em;
 }
 
-#number-left {
+#pinta-left {
   position: absolute;
   top: 0;
   left: 0;
 }
 
-#pinta {
+#number {
   position: absolute;
   top: 50%;
   left: 0;
@@ -28,7 +29,7 @@ body {
   margin: auto;
   text-align: center;
 }
-#number-right {
+#pinta-right {
   position: absolute;
   bottom: 0;
   right: 0;
