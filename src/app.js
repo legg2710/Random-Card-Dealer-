@@ -15,17 +15,16 @@ window.onload = () => {
 
   //Color Function
   function cardcolors() {
-    const simbol = randomizer(pint);
-    if (simbol === "♥" || simbol === "♦");
-    {
+    const pos = randomizer(pint);
+    if (pint[pos] === "♥" || pint[pos] === "♦") {
       let x, i;
-      x = document.querySelectorAll(".card");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.color = "red";
-      }
+      x = document.querySelector("#pinta-left");
+      x.style.color = "red";
+      i = document.querySelector("#pinta-right");
+      i.style.color = "red";
     }
     //Function link
-    let pos = randomizer(pint);
+
     document.getElementById("pinta-left").innerHTML = pint[pos];
     document.getElementById("number").innerHTML = num[pos];
     document.getElementById("pinta-right").innerHTML = pint[pos];
